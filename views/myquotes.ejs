@@ -1,0 +1,60 @@
+<% layout("layouts/boilerplate") -%>
+<link rel="stylesheet" href="/css/memberstyles.css" />
+<div class="container">
+  <%- include("layouts/partials/subnav") %>
+
+  <h2 class="quotationTitle">My Quotes</h2>
+  <div class="tableDiv" id="tableDiv">
+      <% if(memberObj.quotes.length) {
+     for( let quote of memberObj.quotes) {%>
+      <div class="tableParent">
+      <table class="quoteTable" id="<%= quote._id %>">
+        <tbody>
+          <tr class="quoteRow">
+            <th class="quoteLabel">AUTHOR</th>
+            <td class="quoteData">
+              &nbsp;<%=quote.firstname %>&nbsp; <%= quote.surname
+              %>
+            </td>
+          </tr>
+          <tr class="quoteRow">
+            <th class="quoteLabel">QUOTE</th>
+            <td class="quoteData"><%= quote.quote %></td>
+          </tr>
+          <tr class="quoteRow">
+            <td>
+              <form action="/lmj/member/<%=quote._id %>/edit" method="GET">
+                <button class="tdBtnEd">Edit</button>
+              </form>
+            </td>
+            <td>
+              <form
+                action="/lmj/member/<%=quote._id %>/delete?_method=DELETE"
+                method="POST"
+              >
+                <button class="tdBtnDel">Delete</button>
+              </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <% } } else {%>
+      <div class="noQuoteTable" id="noQuoteTable">
+        <div class="noQuoteBtnDiv">
+          <button class="noQuoteBtn" id="noQuoteBtn"><i class="far fa-times-circle"></i></button>
+        </div>
+        <div class="noQuoteBtnText">
+          <h1 class="noQuoteHead noQuote">NO QUOTES AVAILABLE</h1>
+        <h2 class="noQuoteSub noQuote">Please <span>Add Quote</span></h2>
+        </div>
+      </div>
+      <% } %> 
+    </div>
+    <div class="scrollBtnDiv"> 
+      <button class="scrollBtn" id="scrollBtn">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+<script src="/js/myquotes.js" type="text/javascript"></script>
+

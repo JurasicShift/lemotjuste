@@ -1,0 +1,22 @@
+<% layout("layouts/boilerplate") -%>
+<link rel="stylesheet" href="/css/styles.css" />
+<% if(private) {%> 
+    <link rel="stylesheet" href="/css/memberstyles.css" />
+    <div class="container">
+    <%- include("layouts/partials/subnav")  %> 
+    <% } %> 
+    <div class="errorContainer">
+        <div class="errorDiv">
+            <div class="errorTitleDiv">
+            <h3 class="errorTitle">ERROR</h3>
+            <form action="/origin" method="GET" id="originForm">
+                <button type="submit" form="originForm" class="errorBackBtn" id="errorBack">Back</button>
+            </form>
+        </div>
+            <p class="errorText">ERROR: <%= `${err.message}`%></p>
+            <p class="errorText">STATUS: <%= `${err.status}`%></p>
+            <% if (process.env.NODE_ENV !== "production") { %> 
+            <p class="errorText">STACK: <%= `${err.stack}`%></p>
+            <% } %> 
+        </div>
+    </div>

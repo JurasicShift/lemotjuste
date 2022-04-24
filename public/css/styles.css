@@ -1,0 +1,1413 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* =====================================
+LE MOT JUSTE STYLES
+===================================== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.bodyImg {
+  background-image: url("/img/bg10.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -180px; 
+}
+
+.wrapper2 {
+  margin-bottom: 0px;
+}
+
+.footer {
+  height: 180px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.push {
+  height: 180px;
+}
+
+.push2 {
+  height: 0px;
+}
+
+
+/* ========================================
+BOILERPLATE HEADER/FOOTER 
+======================================== */
+
+.navDiv {
+  color: #777;
+  background-color: #eeeeee;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+}
+
+.navImg img {
+  height: 40px;
+  margin-left: 10px;
+}
+
+.menuToggle .fa-bars {
+  color: inherit;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.menuToggle:hover .fa-bars {
+  color: #3d3d3d;
+  cursor: pointer;
+
+}
+
+.privateHider {
+  visibility: hidden;
+}
+.navigation {
+  position: absolute;
+  width: 180px;
+  background-color: #eeeeee;
+  overflow: hidden;
+  transition: max-height 0.75s ease-in-out;
+  border-radius: 0 0 10px 10px;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+}
+
+.navHide {
+  max-height: 0;
+}
+
+.navDisplay {
+  max-height: 500px;
+}
+
+.navigation a {
+  text-decoration: none;
+}
+
+.liDiv {
+  display: flex;
+  justify-content: space-between;
+
+}
+.title {
+  color: #777;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin-left: 15px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.navActive {
+  font-weight: 800;
+  color: #3d3d3d;
+}
+
+.icon {
+  opacity: 0;
+}
+
+.iconDiv img {
+  height: 25px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.liDiv:hover .icon {
+  opacity: 1;
+}
+
+.title:hover {
+  color: #3d3d3d;
+  font-weight: 600;
+}
+
+/* =========================================
+FOOTER SYTLES
+========================================= */
+
+/* see above for .footer and .push */
+
+.dictionaryDiv {
+  display: block;
+  color: #3d3d3d;
+  font-weight: 700;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: #eeeeee;
+  height: 50px;
+}
+
+.dictionaryLabel {
+  margin-left: 10px;
+  color: #3d3d3d;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.dictionaryInput {
+  font-family: "Open Sans", sans-serif;
+  color: #3d3d3d;
+  font-weight: 600;
+  border: 1px solid #777;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.dictionaryBtn {
+  color: #3d3d3d;
+  margin-right: 10px;
+  border: none;
+  border-radius: 50%;
+}
+
+.dictionaryDiv:hover .dictionaryLabel {
+  color: #777;
+  font-weight: 400;
+}
+
+.dictionaryDiv:hover .dictionaryBtn {
+  color: #777;
+  font-weight: 400;
+}
+
+.dictionaryRes {
+  overflow: auto;
+  height: 0px;
+  background-color: white;
+  font-size: 14px;
+  opacity: 0;
+  transition: all .5s ease-out;
+}
+
+.dictionaryDisplay {
+  height: 50px;
+  opacity: 1;
+  padding: 10px;
+}
+
+.dictionaryHide {
+  height: 0px;
+  opacity: 0;
+  padding: 0px;
+}
+
+.dictionaryText {
+  color: #3d3d3d;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 16px;
+}
+
+.dicThanks {
+  font-size: 11px;
+  font-weight: 600;
+  font-style: none;
+  color: #777;
+  margin-top: 5px;
+}
+
+.mainFooter,
+.mainFooter2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+  height: 130px;
+  background-color: #880000;
+}
+
+.iconSpan {
+  font-size: 25px;
+  height: 30px;
+  width: 30px;
+  padding: 10px 10px 0 10px;
+}
+
+.iconSpan a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.iconSpan:hover {
+  color: #777;
+}
+.textFooter {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.textFooter:hover p a {
+  color: #777;
+  font-weight: 600;
+}
+.textFooter a {
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+.publicCopy {
+  margin-left: 15px;
+}
+
+.privateCopy {
+  font-size: 16px;
+  margin-left: none;
+  margin-top: 5px;
+}
+
+.textFooter span {
+  font-style: italic;
+}
+
+/* =========================================
+HOME STYLES
+=========================================  */
+
+.slideBorder {
+  box-sizing: content-box;
+  border-radius: 5px;
+  display: block;
+  padding: 5px;
+  height: 200px;
+  width: 300px;
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: none;
+  transition: box-shadow 3s ease-out;
+
+}
+.borderShadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+.slideShow {
+  display: block;
+  height: 200px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.slideShow img {
+  border-radius: 5px;
+  height: 200px;
+  width: 300px;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.quoteSection {
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.quoteTitle {
+  color: #3d3d3d;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.quoteMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quoteBorder {
+  padding: 15px;
+  height: 100px;
+  width: 300px;
+  margin-top: 20px;
+  overflow: auto;
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  
+}
+
+.quoteText {
+  color: #171717;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 25px;
+  opacity: 0.8;
+}
+
+.spanInput span {
+  display: none;
+}
+
+.spanInput span.fade {
+  display: inline;
+}
+
+.quoteImg {
+  height: 25px;
+  display: inline;
+  margin-left: 5px;
+}
+
+.quoteAuthor {
+  color: #777;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  margin-right: 10px;
+  letter-spacing: 1px;
+  line-height: 16px;
+}
+
+.quoteAuthor span {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.quoteAuthor span.fade {
+  opacity: 1;
+}
+.quoteBtn {
+  color: white;
+  background-color: #880000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  margin: 20px 0 20px 0;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.quoteBtn:hover {
+  background-color: #777;
+}
+
+.quoteSub {
+  display: flex;
+  justify-content: end;
+}
+
+/* =========================================
+CREATE ACCOUNT / LOGIN / CONTACT STYLES
+========================================= */
+.formTitle {
+  color: #3d3d3d;
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+
+.formBorder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0 0 0;
+}
+
+.createForm,
+.loginForm,
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  height: 310px;
+  width: 300px;
+  background-color: #eee;
+  padding: 30px 15px 10px 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+}
+
+.createForm {
+  height: 340px;
+}
+
+.formLabel,
+.checkLabel {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0 5px 10px;
+  color: #880000;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.formLabel span {
+  color: red;
+  font-size: 14px;
+}
+
+.formInput {
+  margin: 5px 10px 10px 10px;
+  width: 250px;
+  border-top: none;
+  border-left: none;
+  border-right: 4px solid rgba(136, 0, 0, 0.9);
+  border-bottom: none;
+  border-radius: 5px;
+  color: #3d3d3d;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 2px 4px;
+  outline: none;
+  transition: border-width 0.7s ease-in;
+}
+
+.borderControl {
+  border: none; 
+}
+
+.checkDiv {
+  display: flex;
+  margin-top: 20px;
+}
+
+.checkInput {
+  width: auto;
+  margin: 6px 0 0 10px;
+}
+
+.btnCreateFormDiv,
+.btnLoginFormDiv,
+.btnContactFormDiv {
+  margin-top: 20px;
+}
+
+.createSubmitBtn,
+.loginSubmitBtn,
+.contactSubmitBtn {
+  color: white;
+  background-color: #880000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.createSubmitBtn,
+.contactSubmitBtn {
+  margin-bottom: 30px;
+}
+
+.createSubmitBtn:hover,
+.loginSubmitBtn:hover,
+.contactSubmitBtn:hover  {
+  background-color: #777;
+}
+
+/* ==========================
+ACADEMIC MODE 
+========================== */
+
+.textLabel {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 10px;
+  color: #880000;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+.toggleDiv {
+  display: flex;
+  margin: 10px 0;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #777;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #880000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #880000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ========================================
+ABOUT / TERMS STYLES
+======================================== */
+
+.aboutTitle,
+.termsTitle {
+  color: #3d3d3d;
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+
+.aboutTitle span {
+    font-style: italic;
+}
+
+.termsDate {
+  color: #777;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.aboutBox,
+.termsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0 0 0;
+  color: #777;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+.aboutBorder,
+.termsBorder {
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  width: 300px;
+  overflow: auto;
+  background-color: #eee;
+  padding: 30px 15px 20px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.aboutSub,
+.termsSub {
+  color: #880000;
+  opacity: 0.9;
+  padding: 10px 0 20px 0;
+}
+
+.aboutText,
+.termsText {
+  padding-bottom: 10px;
+}
+
+.aboutText span {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ===============================================
+ALERT STYLES
+=============================================== */
+
+.successContainer,
+.deleteContainer {
+  height: fit-content;
+  width: 300px;
+  transition: all .5s ease-in;
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.deleteContainer {
+  display: none;
+}
+ 
+.deleteContainerHide {
+  display: none;
+}
+
+.deleteContainerShow {
+  display: block;
+}
+
+.deleteAcBtnDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.successDiv,
+.deleteDiv {
+  height: fit-content;
+  width: fit-content;
+  background-color: #880000;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition: all .5s ease-in;
+}
+
+.messageDisplay {
+  opacity: 0.8;
+}
+
+.messageRemove {
+  opacity: 0;
+}
+
+.successText,
+.deleteText {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.btnContinue,
+.btnDismiss {
+  color: white;
+  background-color: #880000;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btnContinue:hover,
+.btnDismiss:hover {
+  background-color: #777;
+  cursor: pointer;
+}
+
+/* ===============================================
+ALERT STYLES
+=============================================== */
+
+.successContainer,
+.deleteContainer {
+  height: fit-content;
+  width: 300px;
+  transition: all .5s ease-in;
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.deleteContainer {
+  display: none;
+}
+ 
+.deleteContainerHide {
+  display: none;
+}
+
+.deleteContainerShow {
+  display: block;
+}
+
+.deleteAcBtnDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.successDiv,
+.deleteDiv {
+  height: fit-content;
+  width: fit-content;
+  background-color: #880000;
+  margin: 0 auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition: all .5s ease-in;
+}
+
+.messageDisplay {
+  opacity: 0.8;
+}
+
+.messageRemove {
+  opacity: 0;
+}
+
+.successText,
+.deleteText {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.btnContinue,
+.btnDismiss {
+  color: white;
+  background-color: #880000;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btnContinue:hover,
+.btnDismiss:hover {
+  background-color: #777;
+  cursor: pointer;
+}
+
+/* ========================================
+ERROR TEMPLATE STYLES
+========================================= */
+
+.errorContainer {
+  margin-top: 50px;
+}
+
+.errorDiv {
+  height: fit-content;
+  width: 300px;
+  color: white;
+  background-color: #880000;
+  margin: 0 auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.errorTitleDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.errorTitle {
+  line-height: 33px;
+  letter-spacing: 1px;
+}
+
+.errorBackBtn {
+  color: white;
+  background-color: #880000;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.errorBackBtn:hover {
+  background-color: #777;
+  cursor: pointer;
+}
+
+.errorText {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: white;
+  margin-top: 10px;
+}
+/* ======================================
+MEDIA QUERIES
+====================================== */
+
+@media only screen and (min-width: 536px) {
+
+  .slideBorder {
+    height: 275px;
+    width: 375px;
+    margin-top: 50px;
+  }
+  .slideShow {
+    height: 275px;
+    width: 375px;
+  }
+
+  .slideShow img {
+    height: 275px;
+    width: 375px;
+  }
+
+  .quoteSection {
+    width: 430px;
+    margin-top: 40px;
+  }
+
+  .quoteTitle {
+    font-size: 20px;
+  }
+
+  .quoteBorder {
+    padding: 20px;
+    height: 150px;
+    width: 350px;
+    margin-top: 25px;
+  }
+
+  .quoteBtn {
+    margin: 25px 0 20px 0;
+  }
+
+  .formTitle {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+
+  .formBorder {
+    margin-top: 50px;
+    height: 550px;
+  }
+
+  .createForm,
+  .loginForm,
+  .contactForm {
+    height: 375px;
+    width: 350px;
+    padding: 30px;
+  }
+
+  .createForm {
+    height: 395px;
+  }
+
+  .formLabel {
+    margin: 15px 0 5px 10px;
+  }
+
+  .checkLabel {
+    margin: 5px 0 5px 10px;
+  }
+
+  .formInput {
+    width: 260px;
+  }
+
+  .checkInput {
+    width: auto;
+  }
+
+  .toggleDiv {
+    margin: 15px 0;
+  }
+
+  .switch {
+    margin-right: 20px;
+  }
+
+  .createSubmitBtn,
+  .loginSubmitBtn,
+  .contactSubmitBtn {
+    margin-top: 20px;
+  }
+
+  .aboutBox,
+  .termsBox {
+      height: 550px;
+      line-height: 20px;
+      margin-top: 50px;
+  }
+
+  .termsBox {
+    margin-top: 30px;
+  }
+
+  .aboutTitle,
+  .termsTitle {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+
+  .termsDate {
+    margin-left: 30px;
+  }
+
+  .aboutBorder,
+  .termsBorder {
+    height: 600px;
+    width: 400px;
+    padding: 30px 30px 10px 30px;
+  }
+
+  .termsBorder {
+    height: 540px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+
+  .slideBorder {
+    height: 300px;
+    width: 425px;
+    margin-top: 50px;
+  }
+
+  .slideShow {
+    height: 300px;
+    width: 425px;
+  }
+
+  .slideShow img {
+    height: 300px;
+    width: 425px;
+  }
+
+  .quoteSection {
+    width: 490px;
+  }
+
+  .quoteTitle {
+    font-size: 22px;
+  }
+
+  .quoteBorder {
+    width: 380px;
+  }
+
+  .mainFooter {
+    height: 150px;
+  }
+
+  .wrapper {
+    margin-bottom: -200px;
+  }
+
+  .footer {
+    height: 200px;
+  }
+
+  .push {
+    height: 200px;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  .quoteText {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .quoteAuthor {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .mainFooter {
+    height: 175px;
+  }
+
+  .wrapper {
+    margin-bottom: -225px;
+  }
+
+  .footer {
+    height: 225px;
+  }
+
+  .push {
+    height: 225px;
+  }
+
+  .iconFooter {
+    margin-top: 10px;
+  }
+
+  .iconSpan {
+    font-size: 30px;
+    height: 35px;
+    width: 35px;
+    padding: 15px;
+  }
+
+  .textFooter {
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 15px;
+  }
+
+  .textFooter p:nth-child(2) {
+    margin-top: 5px;
+  }
+
+  .privateCopy {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  
+
+  .formTitle {
+    font-size: 23px;
+    margin-left: 50px;
+  }
+
+  .formBorder {
+    margin: 50px 0 0 0;
+    height: 550px;
+  }
+
+  .createForm,
+  .loginForm,
+  .contactForm {
+    height: 400px;
+    width: 375px;
+    padding: 30px;
+  }
+
+  .createForm {
+    height: 420px;
+  }
+
+  .formLabel {
+    margin: 20px 0 5px 10px;
+  }
+
+  .formInput {
+    width: 285px;
+  }
+
+  .checkInput {
+    width: auto;
+  }
+
+  .toggleDiv {
+    margin: 20px 0 15px 0;
+  }
+
+  .createSubmitBtn {
+    margin-top: 20px;
+  }
+
+  .aboutTitle,
+  .termsTitle {
+    font-size: 23px;
+    margin-left: 50px;
+  }
+
+  .termsDate {
+    margin-left: 50px;
+  }
+
+.aboutBox,
+.termsBox {
+  font-size: 18px;
+  line-height: 19px;
+  letter-spacing: 1px;
+}
+
+.aboutBorder,
+.termsBorder {
+  width: 450px;
+  padding: 30px 30px 10px 30px;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+  .slideBorder {
+    width: 500px;
+    padding: 8px;
+  }
+
+  .slideShow {
+    width: 500px;
+  }
+
+  .slideShow img {
+    width: 500px;
+  }
+
+  .quoteSection {
+    width: 570px;
+  }
+
+  .quoteTitle {
+    font-size: 23px;
+  }
+
+  .quoteBorder {
+    width: 450px;
+  }
+
+  .aboutBox,
+  .termsBox {
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,1055 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* ===============================
+MEMBER HOME
+=============================== */
+* {
+  box-sizing: border-box;
+}
+
+.subNav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px 0 10px;
+}
+
+.navProfile .fa-user-circle {
+  color: #880000;
+  background-color: #cccccc;
+  font-size: 40px;
+  border-radius: 50%;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.navProfile .fa-user-circle:hover {
+  color: #777;
+  cursor: pointer;
+}
+
+.citeTitle {
+  font-family: "Merriweather", serif;
+  color: #3d3d3d;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin: 20px 0 0 10px;
+}
+
+.citeBorder,
+.citeBorderLay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.citationFormLay {
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  height: auto;
+  width: 300px;
+  padding: 30px 15px 20px 15px;
+  margin: 30px 0 20px 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  transition: height 0.5s ease-out;
+}
+
+.citationForm {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-top: 20px;
+}
+
+.citeBox1,
+.citeBox2 {
+  background-color: #eee;
+  padding: 30px 15px 20px 15px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.citeBox2 {
+  margin: 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.newLabel {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0 5px 10px;
+  color: #880000;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.newLabel span {
+  color: red;
+  font-size: 14px;
+}
+
+.newInput,
+.newQuote,
+.newQuoteLay {
+  margin: 5px 10px 10px 10px;
+  width: 250px;
+  height: 0px;
+  border-top: none;
+  border-left: none;
+  border-right: 4px solid rgba(136, 0, 0, 0.9);
+  border-bottom: none;
+  border-radius: 5px;
+  color: #3d3d3d;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 2px 4px;
+  transition: height 0.5s ease-out;
+  transition: border-width 0.7s ease-in;
+  outline: none;
+}
+
+.newInput {
+  height: 22px;
+}
+
+.newQuote {
+  border-right: none;
+  height: 22px;
+}
+
+.titleItalics {
+  font-style: italic;
+}
+
+.newQuoteLay {
+  border-right: none;
+}
+
+.memberBtnDiv {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.memberBtn,
+.myQuoteBtn {
+  color: white;
+  background-color: #880000;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 0 20px 0;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: transform 0.1s ease-in;
+}
+
+.myQuoteBtn {
+  margin: 0;
+}
+
+.memberBtn:hover,
+.myQuoteBtn:hover {
+  background-color: #777;
+  cursor: pointer;
+}
+
+/* ========================================
+PROFILE ZONE
+======================================== */
+.container {
+  position: relative;
+}
+
+.profileContainer {
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  width: 275px;
+  height: 380px;
+  background-color: #eee;
+  border: 2px solid brown;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  z-index: 999;
+  font-family: "Merriweather", serif;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.profileHide {
+  opacity: 0;
+}
+
+.profileShow {
+  opacity: 1;
+}
+
+.textFader {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.textFadeIn {
+  opacity: 1;
+}
+
+.textFadeOut {
+  opacity: 0;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploadForm {
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proWelcome,
+.proUser {
+  font-size: 16px;
+  color: #3d3d3d;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin: 5px 0;
+}
+
+.proAcademic {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.uploadText {
+  font-size: 14px;
+  width: 160px;
+  color: #3d3d3d;
+  font-weight: 600;
+  margin: 5px 0px 10px 20px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: font-size 0.25s ease-in-out;
+}
+
+.uploadText span {
+  color: #880000;
+  font-weight: 600;
+}
+
+.uploadText:hover,
+.proLabel:hover {
+  font-size: 15px;
+}
+
+.uploadInput {
+  display: none;
+}
+
+.optionsContainer {
+  margin-top: 20px;
+}
+
+.uploadDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.logDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0;
+}
+
+.navProfile .fa-user-circle,
+.navProfile2 .fa-user-circle {
+  color: #880000;
+  background-color: #cccccc;
+  font-size: 40px;
+  border-radius: 100%;
+  opacity: 0.8;
+  margin: 5px 0;
+}
+
+.navProfile img,
+.navProfile2 img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: 3px solid grey;
+}
+
+.navProfile2 img {
+  border: 2px solid grey;
+}
+
+.proLabel {
+  font-size: 14px;
+  color: #3d3d3d;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 18px;
+  transition: font-size 0.25s ease-in-out;
+}
+
+.proBtn {
+  color: #880000;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.proBtn:hover {
+  color: #777;
+}
+
+.proBtn i {
+  position: relative;
+  top: -3px;
+  left: 5px;
+}
+
+.bin i {
+  left: 2px;
+}
+
+.uploadThumb {
+  display: flex;
+}
+
+#uploadThumb {
+  margin-left: 0px;
+  position: relative;
+  top: 7px;
+}
+/* ==========================
+ACADEMIC MODE 
+========================== */
+
+.modeLabel {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 10px;
+  color: #880000;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+.toggleDiv {
+  display: flex;
+  margin: 10px 0;
+}
+.modeSwitch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+}
+
+.modeSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.modeSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #777;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.modeSlider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .modeSlider {
+  background-color: #880000;
+}
+
+input:focus + .modeSlider {
+  box-shadow: 0 0 1px #880000;
+}
+
+input:checked + .modeSlider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+.modeSlider.modeRound {
+  border-radius: 34px;
+}
+
+.modeSlider.modeRound:before {
+  border-radius: 50%;
+}
+
+/* ======================================
+MY QUOTES
+====================================== */
+.quotationTitle {
+  font-family: "Merriweather", serif;
+  color: #3d3d3d;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin: 20px 0 0 10px;
+}
+
+.tableDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.tableParent {
+  min-height: 200px;
+  transition: all 0.5s ease-in;
+}
+
+.newClass {
+  min-height: 0px;
+}
+
+.noQuoteTable {
+  background-color: #eee;
+  height: 200px;
+  width: 300px;
+  padding: 15px;
+  margin: 30px 0 20px 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.noQuoteFader {
+  opacity: 1;
+}
+
+.noQuoteBtnDiv {
+  display: flex;
+  justify-content: flex-end;
+  height: 28px;
+}
+
+.noQuoteBtnText {
+  position: relative;
+  top: 30px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noQuoteHead {
+  color: #3d3d3d;
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+
+.noQuoteSub {
+  color: #3d3d3d;
+  letter-spacing: 1px;
+}
+
+.noQuoteSub span {
+  color: #880000;
+  letter-spacing: 1px;
+}
+
+.noQuote {
+  font-size: 16px;
+  transition: font-size 0.3s ease-in;
+}
+
+.noQuoteBtn {
+  color: #777;
+  border: none;
+  font-size: 28px;
+  padding: 0;
+  cursor: pointer;
+  transition: font-size 0.3s ease-in;
+}
+
+.noQuoteBtn:hover {
+  color: #880000;
+  opacity: 0.9;
+}
+
+.quoteTable {
+  position: relative;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  height: auto;
+  width: 300px;
+  padding: 30px 15px 20px 15px;
+  margin: 0 0 20px 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  transition: all 0.3s ease-in;
+}
+
+.quoteLabel {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0 5px 10px;
+  color: #880000;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.tdBtnEd,
+.tdBtnDel {
+  color: white;
+  background-color: #880000;
+  border: none;
+  padding: 8px 16px;
+  margin: 15px 0 0 15px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.scrollBtnDiv {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scrollBtn {
+  display: none;
+  background-color: #880000;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px 20px 20px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.scrollBtn i {
+  color: white;
+  font-size: 20px;
+}
+
+.scrollBtn:hover,
+.tdBtn:hover {
+  background-color: #777;
+  cursor: pointer;
+}
+
+.scrollHide {
+  visibility: hidden;
+}
+
+/* =========================================
+UPDATE AND COPY
+========================================= */
+
+.copyBtnDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 10px 0 0;
+}
+.copyText {
+  font-size: 16px;
+  color: #3d3d3d;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 20px;
+  transition: font-size 0.25s ease-in-out;
+}
+
+.copyText:hover {
+  font-size: 17px;
+}
+
+.copyBtn {
+  color: #880000;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.copyBtn:hover {
+  color: #777;
+}
+
+.copyBtn i {
+  position: relative;
+  top: -3px;
+  left: 5px;
+}
+
+.thumbSetter {
+  width: 25px;
+}
+
+.fa-thumbs-up {
+  color: #1184c2;
+  font-size: 0px;
+  margin-left: 10px;
+  position: relative;
+  top: -3px;
+  transition: font-size 0.5s ease-in;
+}
+
+/* ===============================================
+ALERT STYLES
+=============================================== */
+
+.successContainer,
+.deleteContainer {
+  height: fit-content;
+  width: 300px;
+  transition: all 0.5s ease-in;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.deleteContainer {
+  display: none;
+}
+
+.deleteContainerHide {
+  display: none;
+}
+
+.deleteContainerShow {
+  display: block;
+}
+
+.deleteAcBtnDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.successDiv,
+.deleteDiv {
+  height: fit-content;
+  width: fit-content;
+  background-color: #880000;
+  margin: 0 auto;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.messageDisplay {
+  opacity: 0.8;
+}
+
+.messageRemove {
+  opacity: 0;
+}
+
+.successText,
+.deleteText {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.btnContinue,
+.btnDismiss {
+  color: white;
+  background-color: #880000;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btnContinue:hover,
+.btnDismiss:hover {
+  background-color: #777;
+  cursor: pointer;
+}
+
+/* ======================================
+MEDIA QUERIES
+====================================== */
+
+@media only screen and (min-width: 536px) {
+  .citeTitle {
+    font-size: 20px;
+    margin: 20px 0 0 20px;
+  }
+
+  .citeBorderLay,
+  .citeBorder {
+    margin: 20px 0;
+  }
+
+  .citationFormLay {
+    width: 350px;
+    padding: 30px;
+    margin: 30px 0;
+  }
+
+  .newInput,
+  .newQuote,
+  .newQuoteLay {
+    width: 260px;
+  }
+
+  .memberBtn {
+    margin-top: 10px;
+  }
+
+  .quotationTitle {
+    font-size: 20px;
+    margin: 20px 0 0 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .citeBorder {
+    margin: 0px 0px;
+  }
+  .citationFlex {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .citeBox1 {
+    margin: 20px 0;
+    width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+
+  .citeBox2 {
+    width: 335px;
+  }
+
+  .newQuote {
+    width: 290px;
+  }
+
+  .newInput {
+    width: 290px;
+  }
+
+  .newQuoteLay {
+    width: 290px;
+  }
+
+  .citeBox2 .newInput {
+    width: 280px;
+  }
+  .memberBtn {
+    margin-top: 20px;
+  }
+
+  .quoteTable {
+    width: 350px;
+    padding: 30px 20px 20px 20px;
+    margin: 10px 0 20px 0;
+  }
+  .tableDiv {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .citeTitle {
+    font-size: 23px;
+    margin: 10px 0 0 40px;
+  }
+
+  .citationFormLay {
+    width: 500px;
+  }
+
+  .newLabel {
+    margin: 20px 0 5px 10px;
+  }
+
+  .newQuote,
+  .newInput,
+  .newQuoteLay {
+    width: 420px;
+  }
+
+  .citationFlex {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .citeBox1 {
+    width: 480px;
+    margin: 20px;
+  }
+
+  .citeBox2 {
+    margin: 20px;
+  }
+
+  .quotationTitle {
+    font-size: 23px;
+    margin: 10px 0 0 40px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .memberBtn,
+  .myQuoteBtn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .navProfile .fa-user-circle {
+    font-size: 45px;
+  }
+
+  .citationFormLay {
+    width: 600px;
+  }
+
+  .newQuote,
+  .newInput,
+  .newQuoteLay {
+    width: 520px;
+  }
+
+  .citeBox1 {
+    width: 570px;
+  }
+
+  /* .newQuoteLay {
+    height: 100px;
+  } */
+
+  .quoteTable {
+    width: 400px;
+    padding: 30px 40px 20px 30px;
+    margin: 10px 0 20px 0;
+  }
+
+  .quoteData,
+  .quoteLabel {
+    font-size: 18px;
+  }
+}

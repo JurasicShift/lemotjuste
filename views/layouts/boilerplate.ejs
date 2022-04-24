@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <title>LeMotJuste: <%= titleObj %></title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+  </head>
+  <body class="bodyImg">
+    <div class="wrapper" id="wrapper">
+      <header>
+        <div class="navDiv">
+          <div class="navImg">
+            <img src="/img/lemotjusteLogo1.svg" alt="title logo" />
+          </div>
+          
+          <div class="menuToggle <% if(private) {%> privateHider <% } %>" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+           
+        </div>
+        <div class="navigation navHide" id="navigation">
+          <% if(!private) {%> 
+          <ul>
+            <li>
+              <div class="liDiv">
+                <div class="titleDiv">
+                  <a href="/lmj/home">
+                    <% if(titleObj === "Home") {%> 
+                    <span class="title <%="navActive" %>">Home</span>
+                    <% } else { %> 
+                      <span class="title">Home</span>
+                    <% } %> 
+                  </a>
+                </div>
+                <div class="iconDiv">
+                  <span class="icon"
+                    ><img src="/img/quill1.svg" alt="icon"
+                  /></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="liDiv">
+                <div class="titleDiv">
+                  <a href="/lmj/about">
+                    <% if(titleObj === "About") {%>
+                    <span class="title <%="navActive" %>">About</span>
+                    <% } else { %> 
+                      <span class="title">About</span>
+                    <% } %> 
+                  </a>
+                </div>
+                <div class="iconDiv">
+                  <span class="icon"
+                    ><img src="/img/quill1.svg" alt="icon"
+                  /></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="liDiv">
+                <div class="titleDiv">
+                  <a href="/lmj/createAccount"> 
+                    <% if(titleObj === "Create Account") {%>
+                    <span class="title <%="navActive" %>">Create Account</span>
+                    <% } else { %> 
+                      <span class="title">Create Account</span>
+                    <% } %> 
+                  </a>
+                </div>
+                <div class="iconDiv">
+                  <span class="icon"
+                    ><img src="/img/quill1.svg" alt="icon"
+                  /></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="liDiv">
+                <div class="titleDiv">
+                  <a href="/lmj/login">
+                    <% if(titleObj === "Login") {%>
+                    <span class="title <%="navActive" %>">Member Login</span>
+                    <% } else { %> 
+                      <span class="title">Member Login</span>
+                    <% } %> 
+                  </a>
+                </div>
+                <div class="iconDiv">
+                  <span class="icon"
+                    ><img src="/img/quill1.svg" alt="icon"
+                  /></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="liDiv">
+                <div class="titleDiv">
+                  <a href="/lmj/contact">
+                    <% if(titleObj === "Contact") {%>
+                    <span class="title <%="navActive" %>">Contact</span>
+                    <% } else { %> 
+                      <span class="title">Contact</span>
+                    <% } %> 
+                  </a>
+                </div>
+                <div class="iconDiv">
+                  <span class="icon"
+                    ><img src="/img/quill1.svg" alt="icon"
+                  /></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <% } %> 
+        </div>
+      </header>
+      <%- body -%>
+      <div  class="push" id="push"></div>
+    </div>
+    <footer class="footer">
+      <div class="dictionaryDiv">
+        <form action="#">
+          <label class="dictionaryLabel" for="searchTerm">dictionary</label>
+          <input
+            class="dictionaryInput"
+            type="text"
+            name="searchTerm"
+            id="searchTerm"
+            value=""
+          />
+          <button class="dictionaryBtn"  id="dictionaryBtn">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="dictionaryRes" id="dictionaryRes">
+        <p class="dictionaryText" id="definition"></p>
+      </div>
+      <div class="mainFooter" >
+        <div class="iconFooter">
+          <span class="iconSpan"
+            ><a href="#"><i class="fab fa-facebook"></i></a
+          ></span>
+          <span class="iconSpan"
+            ><a href="#"><i class="fab fa-twitter"></i></a
+          ></span>
+          <span class="iconSpan"
+            ><a href="#"><i class="fab fa-instagram"></i></a
+          ></span>
+        </div>
+        <div class="textFooter">
+          <p>
+            <% if(!private) {%>
+            <a href="/lmj/terms">Terms and Conditions</a>
+            <% } %> 
+          </p>
+          <p  class="<% if(private) {%>privateCopy<% } else {%>publicCopy<% } %> "   >&copy; <span>lemotjuste</span> 2021</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/app.js" type="text/javascript"></script>
+  </body>
+</html>

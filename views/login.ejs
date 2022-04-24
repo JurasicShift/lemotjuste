@@ -1,0 +1,26 @@
+<% layout("layouts/boilerplate") -%>
+<%- include("layouts/partials/alert")  %> 
+<h2 class="formTitle">Member Login</h2>
+<div class="formBorder">
+  <form action="/lmj/login" class="loginForm" id="loginForm" method="POST">
+    <label for="LoginUser" class="formLabel">Username<span>*</span></label>
+    <input type="text" class="formInput" id="LoginUser" name="username" />
+    <label for="loginPass" class="formLabel">Password<span>*</span></label>
+    <input type="text" class="formInput" id="loginPass" name="password"/>
+    <div class="checkDiv">
+      <label for="loginCheckMe" class="checkLabel">Remember Me?</label>
+      <input type="checkbox" name="cookieChecker" class="formInput checkInput" id="loginCheckMe" />
+    </div>
+  </form>
+  <div class="btnLoginFormDiv">
+    <button
+      type="submit"
+      form="loginForm"
+      class="loginSubmitBtn"
+      id="loginSubmitBtn"
+    >
+      SUBMIT
+    </button>
+  </div>
+</div>
+<script src="/js/myquotes.js" type="text/javascript"></script>

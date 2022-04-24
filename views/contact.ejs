@@ -1,0 +1,22 @@
+<% layout("layouts/boilerplate") -%>
+<h2 class="formTitle">Contact Us</h2>
+  <div class="formBorder">
+    <form action="/lmj/contact" class="contactForm" id="contactForm" method="POST">
+      <label for="contactEmail" class="formLabel">Your e-mail<span>*</span></label>
+      <input type="text" class="formInput" name="email" id="contactEmail" />
+      <label for="contactSubject" class="formLabel">Subject<span>*</span></label>
+      <input type="text" class="formInput" name="subject" id="contactSubject" />
+      <label for="contactMessage" class="formLabel">Message<span>*</span></label>
+      <textarea class="formInput borderControl" name="text" id="contactText" cols="30" rows="10"></textarea>
+    </form>
+  <div class="btnContactFormDiv">
+    <button
+      type="submit"
+      form="contactForm"
+      class="contactSubmitBtn"
+      id="contactSubmitBtn"
+    >
+      SUBMIT
+    </button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<% if(success && success.length) {%>
+<div class="successContainer">
+  <div class="successDiv" id="successDiv" role="alert">
+    <p class="successText"><%= success %></p>
+  </div>
+</div>
+<% } %>
+<% if(error && error.length) {%>
+  <div class="successContainer">
+    <div class="successDiv" id="successDiv" role="alert">
+      <p class="successText"><%= error %></p>
+    </div>
+  </div>
+  <% } %>
+<div class="deleteContainer" id="deleteContainer">
+  <div class="deleteDiv" id="deleteMessage" role="alert">
+    <p class="deleteText">Are you sure you want to delete?</p>
+    <div class="deleteAcBtnDiv">
+      <button class="btnContinue" id="btnContinue">Yes</button>
+      <button class="btnDismiss" id="btnDismiss">No</button>
+    </div>
+  </div>
+</div>

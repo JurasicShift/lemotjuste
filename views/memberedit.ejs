@@ -1,0 +1,57 @@
+<% layout("layouts/boilerplate") -%>
+<link rel="stylesheet" href="/css/memberstyles.css" />
+<div class="container">
+<%- include("layouts/partials/subnav")  %> 
+<h2 class="citeTitle">Update & Copy</h2>
+
+<div class="citeBorder">
+  <form
+    action="/lmj/member/<%= quoteObj._id %>/edit?_method=PUT"
+    class="citationForm citationFlex"
+    id="qtEditForm"
+    method="POST"
+  >
+    <div class="citeBox1">
+      <label for="newQuote" class="newLabel">Quote<span>*</span></label>
+      <textarea name="quote" class="newQuote" id="newQuote"><%= quoteObj.quote %></textarea>
+      <label for="newAuthor" class="newLabel">Author<span>*</span></label>
+      <div class="newAuthor" id="newAuthor">
+        <input type="text" id="surName" name="surname" value="<%= quoteObj.surname %>" class="newInput" placeholder="surname"/>
+        <input type="text" id="firstName" name="firstname" value="<%= quoteObj.firstname %>" class="newInput" placeholder="firstname"/>
+        </div>
+        <hr>
+        <div class="copyBtnDiv">
+            <p class="copyText">Copy quote</p><button class="copyBtn" type="button" id="copyBtn"><i class="far fa-copy"></i></button><div class="thumbSetter"><i class="far fa-thumbs-up" id="thumb"></i></div>
+        </div>
+    </div>
+    <div class="citeBox2">
+        <label for="newPage" class="newLabel">Page number</label>
+      <input type="text" id="page" name="page" value="<%= quoteObj.page %>" class="newInput" id="newPage" />
+      <label for="newYear" class="newLabel">Year</label>
+      <input type="text" id="year" name="year" value="<%= quoteObj.year %>" class="newInput" id="newYear" />
+      <label for="newTitle" class="newLabel">Title</label>
+      <input type="text" name="title" value="<%= quoteObj.title %>" class="newInput titleItalics" id="newTitle" />
+      <label for="newPublisher" class="newLabel">Publisher</label>
+      <input type="text" name="publisher" value="<%= quoteObj.publisher %>" class="newInput" id="newPublisher" />
+      <label for="newPlace" class="newLabel">Place</label>
+      <input type="text" name="place" value="<%= quoteObj.place %>" class="newInput" id="newPlace" />
+      <hr>
+      <div class="copyBtnDiv">
+        <p class="copyText">Copy in-text citation</p><button class="copyBtn" id="copyInText" type="button"><i class="far fa-copy"></i></button><div class="thumbSetter"><i class="far fa-thumbs-up" id="thumb2"></i></div>
+      </div>
+      <div class="copyBtnDiv">
+        <p class="copyText">Copy full reference</p><button class="copyBtn" id="copyFullRef" type="button"><i class="far fa-copy"></i></button><div class="thumbSetter"><i class="far fa-thumbs-up" id="thumb3"></i></div>
+      </div>
+    </div>
+  </form>
+  <div class="memberBtnDiv">
+    <button class="memberBtn" id="memberBtn" type="submit" form="qtEditForm">SAVE</button>
+  </div>
+</div>
+<div class="scrollBtnDiv"> 
+  <button class="scrollBtn" id="scrollBtn">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+</div>
+<script src="/js/myquotes.js" type="text/javascript"></script>
+<script src="/js/editquote.js" type="text/javascript"></script>
