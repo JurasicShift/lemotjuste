@@ -210,12 +210,12 @@ const deleteAccount = catchAsync(async (req, res) => {
   req.session.titleObj = null;
   req.session.mode = null;
   req.session.profileUrl = null;
-  res.redirect("/lmj/home");
+  res.redirect("/lmj/");
 });
 
 const logout = (req, res) => {
   req.session.user_id = null;
-  res.redirect("/lmj/home");
+  res.redirect("/lmj/");
 };
 
 module.exports = {

@@ -16,7 +16,7 @@ const { loginJoi, createAcJoi } = require("../joischemas.js");
 
 const Public = require("../controllers/public");
 
-router.get("/home", validateFetch, Public.home);
+router.get("/", validateFetch, Public.home);
 
 router.get("/createAccount", Public.createAccount);
 

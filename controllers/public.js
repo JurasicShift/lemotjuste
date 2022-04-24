@@ -91,7 +91,7 @@ const postContact = (req, res) => {
     if(data) {
       const flasher = req.flash("success", "KAPOW! Message Sent!!!");
       if(flasher === 1) {
-        res.redirect("/lmj/home");
+        res.redirect("/lmj/");
       }
     } else {
       throw new AppError("MESSAGE FAILED. CONTACT US DIRECT ON LEMOTJUSTECHAT@OUTLOOK.COM", 502);
