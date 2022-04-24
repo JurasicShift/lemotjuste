@@ -46,7 +46,7 @@ const citationAcademic = catchAsync(async (req, res) => {
   await quote.save();
   memberObj.quotes.push(quote);
   await memberObj.save();
-  res.redirect("/lmj/member/myQuote");
+  res.redirect("/member/myQuote");
 });
 
 const citationLay = catchAsync(async (req, res) => {
@@ -56,7 +56,7 @@ const citationLay = catchAsync(async (req, res) => {
   await quote.save();
   memberObj.quotes.push(quote);
   await memberObj.save();
-  res.redirect("/lmj/member/myQuote");
+  res.redirect("/member/myQuote");
 });
 
 const quotePage = catchAsync(async (req, res) => {
@@ -126,7 +126,7 @@ const quoteEditUpdate = catchAsync(async (req, res) => {
     runValidators: true,
     new: true,
   });
-  res.redirect("/lmj/member/myQuote");
+  res.redirect("/member/myQuote");
 });
 
 const modeModulate = catchAsync(async (req, res) => {
@@ -151,9 +151,9 @@ const modeModulate = catchAsync(async (req, res) => {
   const mode = memberObj.mode;
   req.session.mode = mode;
   if (mode === "true") {
-    res.redirect("/lmj/member/home/academic");
+    res.redirect("/member/home/academic");
   } else {
-    res.redirect("/lmj/member/home/lay");
+    res.redirect("/member/home/lay");
   }
 });
 
@@ -169,9 +169,9 @@ const photoUploader = catchAsync(async (req, res) => {
   req.session.profileUrl = profileUrl;
   req.flash("success", "Image successfully uploaded");
   if (mode === "true") {
-    res.redirect("/lmj/member/home/academic");
+    res.redirect("/member/home/academic");
   } else {
-    res.redirect("/lmj/member/home/lay");
+    res.redirect("/member/home/lay");
   }
 });
 
@@ -190,9 +190,9 @@ const photoDelete = catchAsync(async (req, res) => {
     req.session.profileUrl = profileUrl;
     req.flash("success", "Image successfully deleted");
     if (mode === "true") {
-      res.redirect("/lmj/member/home/academic");
+      res.redirect("/member/home/academic");
     } else {
-      res.redirect("/lmj/member/home/lay");
+      res.redirect("/member/home/lay");
     }
   } else {
     throw new AppError("COULD NOT FIND IMAGE", 500);
@@ -210,12 +210,12 @@ const deleteAccount = catchAsync(async (req, res) => {
   req.session.titleObj = null;
   req.session.mode = null;
   req.session.profileUrl = null;
-  res.redirect("/lmj/");
+  res.redirect("/");
 });
 
 const logout = (req, res) => {
   req.session.user_id = null;
-  res.redirect("/lmj/");
+  res.redirect("/");
 };
 
 module.exports = {

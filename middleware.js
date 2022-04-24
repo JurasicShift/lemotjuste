@@ -38,7 +38,7 @@ const randomFactor = function() {
     const b = req.body;
     if(b.password.length < 8) {
       req.flash("error", "Password must contain at least 8 characters!!");
-      res.redirect(`/lmj${req.url}`);
+      res.redirect(`/${req.url}`);
     } else {
       next();
     }
@@ -50,7 +50,7 @@ const randomFactor = function() {
       next();
     } else {
         req.flash("error", "Passwords must match!!");
-        res.redirect(`/lmj${req.url}`);
+        res.redirect(`/${req.url}`);
     }
   };
   
@@ -71,7 +71,7 @@ const randomFactor = function() {
 
 module.exports.requireLogin = (req, res, next) => {
     if (!req.session.user_id) {
-      return res.redirect("/lmj/login");
+      return res.redirect("/login");
     }
     next();
   };

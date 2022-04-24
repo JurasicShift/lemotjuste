@@ -113,8 +113,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/lmj", public);
-app.use("/lmj/member", private);
+app.use("/", public);
+app.use("/member", private);
 
 app.get("/origin", (req, res) => {
     res.redirect(req.session.returnTo);

@@ -1,10 +1,10 @@
 <div class="subNav">
   <% if(titleObj.includes("Quotes")) {%> 
-    <form <% if(mode === "true") {%>  action="/lmj/member/home/academic" <% } else { %> action="/lmj/member/home/lay" <% } %>  method="GET" id="myQuote">
+    <form <% if(mode === "true") {%>  action="/member/home/academic" <% } else { %> action="/lmj/member/home/lay" <% } %>  method="GET" id="myQuote">
       <button class="myQuoteBtn" type="submit" form="myQuote" id="btnMover">ADD QUOTE</button>
       </form>
     <% } else {%>
-      <form action="/lmj/member/myQuote" method="GET" id="myQuote">
+      <form action="/member/myQuote" method="GET" id="myQuote">
         <button class="myQuoteBtn" type="submit" form="myQuote">MY QUOTES</button>
         </form>
       <% } %>  
@@ -26,7 +26,7 @@
       <p class="proUser"><%= profileObj %></p>
       <div class="proAcademic">
         <p class="modeLabel">Academic Mode:</p>
-        <form action="/lmj/member/modulate" method="POST" id="modalForm">
+        <form action="/member/modulate" method="POST" id="modalForm">
         <label class="modeSwitch">
           <% if(mode === "true") { %> 
           <input type="checkbox" name="mode" value="false" <%= "checked" %> >
@@ -38,7 +38,7 @@
       </form>
       </div>
     </div>
-      <form action="/lmj/member/photoUpload" class="uploadForm" id="uploadForm" method="POST" enctype="multipart/form-data">
+      <form action="/member/photoUpload" class="uploadForm" id="uploadForm" method="POST" enctype="multipart/form-data">
   <div class="uploadThumb">
         <label class="uploadText" for="myFile">Click <span>here</span> to select profile image:</label><i class="far fa-thumbs-up thumbPos" id="uploadThumb"></i>
       </div>
@@ -48,7 +48,7 @@
           <button type="submit" for="uploadForm" id="imgUploadBtn" class="proBtn"><i class="far fa-images"></i></button>
         </div>
       </form>
-      <form action="/lmj/member/photoDelete?_method=PUT" class="photoDelete" id="photoDelete" method="POST">
+      <form action="/member/photoDelete?_method=PUT" class="photoDelete" id="photoDelete" method="POST">
         <div class="uploadDiv">
         <label class="proLabel" for="photoDelBtn">Delete Image</label>
         <button type="submit" form="photoDelete" id="photoDelBtn" class="proBtn bin"><i class="far fa-trash-alt"></i></button>
@@ -56,13 +56,13 @@
       </form>
         <hr>
     <div class="optionsContainer">
-      <form action="/lmj/member/logout" id="logOut" method="GET">
+      <form action="/member/logout" id="logOut" method="GET">
         <div class="logDiv">
         <label for="logOutBtn" class="proLabel">Log Out</label>
         <button type="submit" form="logOut" id="logOutBtn" class="proBtn"><i class="fas fa-sign-out-alt"></i></button>
         </div>
       </form>
-      <form action="/lmj/member/deleteAc?_method=DELETE" id="deleteAc" method="POST">
+      <form action="/member/deleteAc?_method=DELETE" id="deleteAc" method="POST">
         <div class="logDiv">
         <label for="deleteAcBtn" class="proLabel">Delete Account</label>
         <button type="submit" form="deleteAc" id="deleteAcBtn" class="proBtn bin"><i class="far fa-trash-alt"></i></button>

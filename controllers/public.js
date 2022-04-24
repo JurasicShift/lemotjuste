@@ -35,9 +35,9 @@ const postCreateAccount = catchAsync(async (req, res) => {
     req.session.mode = mode;
     req.flash("success", `Greetings ${name}!!!`);
     if (mode === "true") {
-      res.redirect("/lmj/member/home/academic");
+      res.redirect("/member/home/academic");
     } else {
-      res.redirect("/lmj/member/home/lay");
+      res.redirect("/member/home/lay");
     }
   });
 
@@ -62,9 +62,9 @@ const postLogin = catchAsync(async (req, res) => {
       req.session.profileUrl = profileUrl;
       req.flash("success", `Greetings ${username}!!!`);
       if (mode === "true") {
-        res.redirect("/lmj/member/home/academic");
+        res.redirect("/member/home/academic");
       } else {
-        res.redirect("/lmj/member/home/lay");
+        res.redirect("/member/home/lay");
       }
     } else {
       throw new AppError("PASSWORDS OR USERNAME DON'T MATCH", 401);
@@ -82,8 +82,6 @@ const contact = (req, res) => {
     res.render("contact", { titleObj, private});
   }
 
-
-
 const postContact = (req, res) => {
   const {email, subject, text} = req.body;
   const titleObj = "Home";
@@ -91,7 +89,7 @@ const postContact = (req, res) => {
     if(data) {
       const flasher = req.flash("success", "KAPOW! Message Sent!!!");
       if(flasher === 1) {
-        res.redirect("/lmj/");
+        res.redirect("/");
       }
     } else {
       throw new AppError("MESSAGE FAILED. CONTACT US DIRECT ON LEMOTJUSTECHAT@OUTLOOK.COM", 502);
