@@ -552,15 +552,15 @@ HOME STYLES
 
 .spanInput span.fade {
   display: inline;
-  line-height: 25px;
+  line-height: 37px;
 }
 
 .quoteImg {
-  height: 23px;
+  height: 25px;
   display: inline;
   margin-left: 5px;
-  position: relative;
-  top: 5px;
+  /* position: relative;
+  top: 5px; */
 }
 
 .quoteAuthor {
