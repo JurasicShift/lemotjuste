@@ -552,6 +552,7 @@ HOME STYLES
 
 .spanInput span.fade {
   display: inline;
+  line-height: 25px;
 }
 
 .quoteImg {
