@@ -76,7 +76,7 @@ const randomQuote = async () => {
     headers: new Headers({ "call-type": "fetch"}),
   };
   try {
-    const response = await fetch("/lmj/home", options);
+    const response = await fetch("/", options);
     const data = await response.json();
     quoteObj = data;
     quoteScroll(quoteObj.quote, quote);

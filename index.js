@@ -99,7 +99,11 @@ app.use(
               "'self'",
               "blob:",
               "data:",
-              "https://res.cloudinary.com/lemotjuste/", 
+              "https://res.cloudinary.com/lemotjuste/",
+              "http://www.w3.org/2000/svg",
+              "http://www.w3.org/1999/xlink",
+              "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+
           ],
       },
   })
