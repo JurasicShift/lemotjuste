@@ -559,6 +559,8 @@ HOME STYLES
   height: 25px;
   display: inline;
   margin-left: 5px;
+  position: relative;
+  top: 5px;
 }
 
 .quoteAuthor {
