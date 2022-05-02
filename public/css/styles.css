@@ -559,8 +559,6 @@ HOME STYLES
   height: 25px;
   display: inline;
   margin-left: 5px;
-  /* position: relative;
-  top: 5px; */
 }
 
 .quoteAuthor {
@@ -699,6 +697,7 @@ CREATE ACCOUNT / LOGIN / CONTACT STYLES
   background-color: #880000;
   border: none;
   padding: 8px 16px;
+  margin-bottom: 30px;
   border-radius: 30px;
   font-family: inherit;
   font-size: 12px;
@@ -706,10 +705,10 @@ CREATE ACCOUNT / LOGIN / CONTACT STYLES
   font-weight: 600;
 }
 
-.createSubmitBtn,
+/* .createSubmitBtn,
 .contactSubmitBtn {
   margin-bottom: 30px;
-}
+} */
 
 .createSubmitBtn:hover,
 .loginSubmitBtn:hover,
