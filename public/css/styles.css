@@ -705,11 +705,6 @@ CREATE ACCOUNT / LOGIN / CONTACT STYLES
   font-weight: 600;
 }
 
-/* .createSubmitBtn,
-.contactSubmitBtn {
-  margin-bottom: 30px;
-} */
-
 .createSubmitBtn:hover,
 .loginSubmitBtn:hover,
 .contactSubmitBtn:hover  {
@@ -841,7 +836,7 @@ ABOUT / TERMS STYLES
   background-color: #eee;
   padding: 30px 15px 20px 15px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
