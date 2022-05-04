@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
@@ -59,6 +60,7 @@ app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride("_method"));
@@ -82,7 +84,6 @@ const styleSrcUrls = [
 
 const connectSrcUrls = [
   "https://www.dictionaryapi.com/",
-  "https://www.lemotjuste.org.uk/"
 ];
 const fontSrcUrls = [];
 
@@ -108,7 +109,6 @@ app.use(
       },
   })
 );
-
 
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
