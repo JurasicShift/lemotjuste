@@ -30,7 +30,7 @@
       <header>
         <div class="navDiv">
           <div class="navImg">
-            <img src="/img/lemotjustelogo1.svg" alt="title logo" />
+           <a href="<% if(private) {%>/member/logout<% } else { %>/<% } %>"><img src="/img/lemotjustelogo1.svg" alt="title logo" /></a> 
           </div>
           
           <div class="menuToggle <% if(private) {%> privateHider <% } %>" id="menuToggle">
