@@ -82,7 +82,7 @@ const styleSrcUrls = [
 
 const connectSrcUrls = [
   "https://www.dictionaryapi.com/",
-  
+  "https://www.lemotjuste.org.uk/"
 ];
 const fontSrcUrls = [];
 
