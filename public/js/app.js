@@ -44,13 +44,18 @@ function listenerFn(btn, lab) {
 
 function navEvent() {
   menuToggler.addEventListener("click", () => {
-    if (navigation.classList.contains("navDisplay")) {
-      navClose();
-      titleRevert();
+    if(window.innerWidth < 992) {
+      if (navigation.classList.contains("navDisplay")) {
+        navClose();
+        titleRevert();
+      } else {
+        navOpen();
+        titleOpacity();
+      }
     } else {
-      navOpen();
-      titleOpacity();
+      return;
     }
+  
   });
 }
 
@@ -79,10 +84,15 @@ function titleRevert() {
 }
 
 function navReturn() {
-  navigation.addEventListener("mouseleave", () => {
-    navClose();
-    titleRevert();
-  });
+  if(window.innerWidth < 992) {
+    navigation.addEventListener("mouseleave", () => {
+      navClose();
+      titleRevert();
+    });
+  } else {
+    return;
+  }
+ 
 }
 
 // =====================================================

@@ -29,19 +29,19 @@
     <div class="wrapper" id="wrapper">
       <header>
         <div class="navDiv">
-          <div class="navImg">
-           <a href="<% if(private) {%>/member/logout<% } else { %>/<% } %>"><img src="/img/lemotjustelogo1.svg" alt="title logo" /></a> 
-          </div>
-          
+
           <div class="menuToggle <% if(private) {%> privateHider <% } %>" id="menuToggle">
             <i class="fas fa-bars"></i>
           </div>
-           
+
+          <div class="navImg">
+           <a href="<% if(private) {%>/member/logout<% } else { %>/<% } %>"><img src="/img/lemotjustelogo1.svg" alt="title logo" /></a> 
+          </div> 
         </div>
         <div class="navigation navHide" id="navigation">
           <% if(!private) {%> 
-          <ul>
-            <li>
+          <ul class="navList">
+            <li class="liStyle">
               <div class="liDiv">
                 <div class="titleDiv">
                   <a href="/">
@@ -59,7 +59,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="liStyle">
               <div class="liDiv">
                 <div class="titleDiv">
                   <a href="/about">
@@ -77,7 +77,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="liStyle">
               <div class="liDiv">
                 <div class="titleDiv">
                   <a href="/createAccount"> 
@@ -95,7 +95,7 @@
                 </div>
               </div>
             </li>
-            <li>
+            <li class="liStyle">
               <div class="liDiv">
                 <div class="titleDiv">
                   <a href="/login">

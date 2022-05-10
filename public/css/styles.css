@@ -195,7 +195,7 @@ body {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -180px; 
+  margin-bottom: -180px;
 }
 
 .wrapper2 {
@@ -216,7 +216,6 @@ body {
   height: 0px;
 }
 
-
 /* ========================================
 BOILERPLATE HEADER/FOOTER 
 ======================================== */
@@ -229,24 +228,22 @@ BOILERPLATE HEADER/FOOTER
   justify-content: space-between;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-
 }
 
 .navImg img {
   height: 40px;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .menuToggle .fa-bars {
   color: inherit;
   font-size: 30px;
-  margin-right: 10px;
+  margin-left: 15px;
 }
 
 .menuToggle:hover .fa-bars {
   color: #3d3d3d;
   cursor: pointer;
-
 }
 
 .privateHider {
@@ -261,7 +258,6 @@ BOILERPLATE HEADER/FOOTER
   border-radius: 0 0 10px 10px;
   z-index: 999;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-
 }
 
 .navHide {
@@ -279,7 +275,6 @@ BOILERPLATE HEADER/FOOTER
 .liDiv {
   display: flex;
   justify-content: space-between;
-
 }
 .title {
   color: #777;
@@ -370,7 +365,7 @@ FOOTER SYTLES
   background-color: white;
   font-size: 14px;
   opacity: 0;
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .dictionaryDisplay {
@@ -473,11 +468,10 @@ HOME STYLES
   margin-right: auto;
   box-shadow: none;
   transition: box-shadow 3s ease-out;
-
 }
 .borderShadow {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .slideShow {
@@ -532,12 +526,11 @@ HOME STYLES
   background-color: #eee;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  
 }
 
 .quoteText {
   color: #171717;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-size: 14px;
   font-style: italic;
   font-weight: 600;
@@ -604,6 +597,13 @@ HOME STYLES
 /* =========================================
 CREATE ACCOUNT / LOGIN / CONTACT STYLES
 ========================================= */
+
+.h2Div {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .formTitle {
   color: #3d3d3d;
   font-family: "Merriweather", serif;
@@ -631,7 +631,6 @@ CREATE ACCOUNT / LOGIN / CONTACT STYLES
   padding: 30px 15px 10px 15px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-
 }
 
 .createForm {
@@ -671,7 +670,7 @@ CREATE ACCOUNT / LOGIN / CONTACT STYLES
 }
 
 .borderControl {
-  border: none; 
+  border: none;
 }
 
 .checkDiv {
@@ -707,7 +706,7 @@ CREATE ACCOUNT / LOGIN / CONTACT STYLES
 
 .createSubmitBtn:hover,
 .loginSubmitBtn:hover,
-.contactSubmitBtn:hover  {
+.contactSubmitBtn:hover {
   background-color: #777;
 }
 
@@ -792,6 +791,13 @@ input:checked + .slider:before {
 ABOUT / TERMS STYLES
 ======================================== */
 
+.h2DivTerms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
 .aboutTitle,
 .termsTitle {
   color: #3d3d3d;
@@ -803,7 +809,7 @@ ABOUT / TERMS STYLES
 }
 
 .aboutTitle span {
-    font-style: italic;
+  font-style: italic;
 }
 
 .termsDate {
@@ -830,7 +836,7 @@ ABOUT / TERMS STYLES
 .termsBorder {
   display: flex;
   flex-direction: column;
-  height: 320px;
+  /* height: 320px; */
   width: 300px;
   overflow: auto;
   background-color: #eee;
@@ -865,18 +871,18 @@ ALERT STYLES
 .deleteContainer {
   height: fit-content;
   width: 300px;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   position: absolute;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
   margin-right: auto;
 }
 
 .deleteContainer {
   display: none;
 }
- 
+
 .deleteContainerHide {
   display: none;
 }
@@ -901,7 +907,7 @@ ALERT STYLES
   text-align: center;
   opacity: 0;
   transition: opacity 1s ease-in;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .messageDisplay {
@@ -948,18 +954,18 @@ ALERT STYLES
 .deleteContainer {
   height: fit-content;
   width: 300px;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   position: absolute;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
   margin-right: auto;
 }
 
 .deleteContainer {
   display: none;
 }
- 
+
 .deleteContainerHide {
   display: none;
 }
@@ -984,7 +990,7 @@ ALERT STYLES
   text-align: center;
   opacity: 0;
   transition: opacity 1s ease-in;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .messageDisplay {
@@ -1084,7 +1090,6 @@ MEDIA QUERIES
 ====================================== */
 
 @media only screen and (min-width: 536px) {
-
   .slideBorder {
     height: 275px;
     width: 375px;
@@ -1175,9 +1180,9 @@ MEDIA QUERIES
 
   .aboutBox,
   .termsBox {
-      height: 550px;
-      line-height: 20px;
-      margin-top: 50px;
+    /* height: 550px; */
+    line-height: 20px;
+    margin-top: 50px;
   }
 
   .termsBox {
@@ -1197,7 +1202,7 @@ MEDIA QUERIES
 
   .aboutBorder,
   .termsBorder {
-    height: 600px;
+    /* height: 600px; */
     width: 400px;
     padding: 30px 30px 10px 30px;
   }
@@ -1208,7 +1213,6 @@ MEDIA QUERIES
 }
 
 @media only screen and (min-width: 769px) {
-
   .slideBorder {
     height: 300px;
     width: 425px;
@@ -1252,10 +1256,67 @@ MEDIA QUERIES
   .push {
     height: 200px;
   }
-
 }
 
 @media only screen and (min-width: 992px) {
+  .menuToggle {
+    pointer-events: none;
+  }
+
+  .menuToggle .fa-bars {
+    color: #eeeeee;
+  }
+
+  .navigation {
+    width: 100%;
+    max-height: 500px;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .liStyle {
+    border-right: 1px solid #777;
+    height: 25px;
+  }
+
+  .navList {
+    display: flex;
+    justify-content: center;
+    background-color: none;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+
+  .title {
+    color: rgba(136, 0, 0, 0.9);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 25px;
+    opacity: 1;
+    font-style: normal;
+  }
+
+  span.title {
+    margin-left: 30px;
+  }
+
+  .navActive {
+    font-weight: 900;
+    color: #3d3d3d;
+  }
+
+  .liDiv:hover .icon {
+    opacity: 0;
+  }
+
+  .title:hover {
+    color: #3d3d3d;
+  }
+
+  .slideBorder {
+    margin-top: 70px;
+  }
 
   .quoteText {
     font-size: 15px;
@@ -1309,15 +1370,14 @@ MEDIA QUERIES
     margin-top: 15px;
     margin-left: 10px;
   }
-  
 
   .formTitle {
     font-size: 23px;
-    margin-left: 50px;
+    margin-left: 0px;
   }
 
   .formBorder {
-    margin: 50px 0 0 0;
+    margin: 30px 0 0 0;
     height: 550px;
   }
 
@@ -1356,31 +1416,43 @@ MEDIA QUERIES
   .aboutTitle,
   .termsTitle {
     font-size: 23px;
-    margin-left: 50px;
+    margin-left: 0px;
   }
 
   .termsDate {
     margin-left: 50px;
   }
 
-.aboutBox,
-.termsBox {
-  font-size: 18px;
-  line-height: 19px;
-  letter-spacing: 1px;
-}
+  .aboutBox,
+  .termsBox {
+    font-size: 18px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+  }
 
-.aboutBorder,
-.termsBorder {
-  width: 450px;
-  padding: 30px 30px 10px 30px;
-}
+  .aboutBorder,
+  .termsBorder {
+    width: 450px;
+    padding: 30px 30px 10px 30px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+
+  .title {
+    font-size: 18px;
+    letter-spacing: 2.5px;
+  }
+
+  span.title {
+    margin-left: 40px;
+  }
+
   .slideBorder {
     width: 500px;
     padding: 8px;
+    margin-top: 65px;
   }
 
   .slideShow {
