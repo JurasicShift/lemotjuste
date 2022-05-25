@@ -291,6 +291,13 @@ BOILERPLATE HEADER/FOOTER
   color: #3d3d3d;
 }
 
+@-moz-document url-prefix() {
+  .navActive {
+    color: #3d3d3d;
+    font-weight: 500;
+  }
+}
+
 .icon {
   opacity: 0;
 }
@@ -309,6 +316,13 @@ BOILERPLATE HEADER/FOOTER
   color: #3d3d3d;
   font-weight: 600;
 }
+@-moz-document url-prefix() {
+  .title:hover {
+    color: #3d3d3d;
+    font-weight: 500;
+  }
+}
+
 
 /* =========================================
 FOOTER SYTLES
@@ -725,6 +739,7 @@ CREATE ACCOUNT / LOGIN / CONTACT STYLES
 
 .borderControl {
   border: none;
+  min-height: 120px;
 }
 
 .checkDiv {

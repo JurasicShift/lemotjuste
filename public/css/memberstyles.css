@@ -423,7 +423,16 @@ PROFILE ZONE
   font-weight: 600;
 }
 
-.uploadText:hover,
+.uploadText:hover {
+  font-size: 15px;
+}
+
+@supports (-moz-appearance:none) {
+  .uploadText:hover {
+    font-size: 14px;
+  }
+}
+
 .proLabel:hover {
   font-size: 15px;
 }
