@@ -1,6 +1,6 @@
 <div class="subNav">
   <% if(titleObj.includes("Quotes")) {%> 
-    <form <% if(mode === "true") {%>  action="/member/home/academic" <% } else { %> action="/lmj/member/home/lay" <% } %>  method="GET" id="myQuote">
+    <form <% if(mode === "true") {%>  action="/member/home/academic" <% } else { %> action="/member/home/lay" <% } %>  method="GET" id="myQuote">
       <button class="myQuoteBtn" type="submit" form="myQuote" id="btnMover">ADD QUOTE</button>
       </form>
     <% } else {%>

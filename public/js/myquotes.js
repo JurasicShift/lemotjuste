@@ -12,16 +12,12 @@ function onLoad() {
   if (scrollBtn) {
     scrollBtnLoader();
   }
-  if (strCheck2) {
-    cookieLoader();
-  }
   if(successDiv) {
     alertStyler(successDiv);
   }
 }
 let urlStr2 = window.location.href;
 let strCheck = urlStr2.includes("member/myQuote");
-let strCheck2 = urlStr2.includes("lmj/login");
 
 const tableDiv = document.getElementById("tableDiv");
 
@@ -314,19 +310,7 @@ function addHeight() {
 if (tableDivsArr.length) {
   firstChild();
 }
-// ==============================================
-// COOKIE FIND AND ADD TO MEMBER LOGIN
-// ==============================================
 
-function cookieLoader() {
-  const input = document.getElementById("LoginUser");
-  const cookieMagic = document.cookie;
-  if (cookieMagic) {
-    const cookieArr = cookieMagic.split("=");
-    input.value = cookieArr[1];
-    return;
-  }
-}
 // ==================================================
 // ALERT STYLES
 // ==================================================

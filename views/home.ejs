@@ -1,10 +1,12 @@
 <% layout("layouts/boilerplate") -%>
 <%- include("layouts/partials/alert")  %> 
 <div class="slideBorder" id="slideBorder">
-  <div class="slideShow" id="slideShow"></div>
+  <div class="slideShow" id="slideShow">
+    <p class="slideAuthor" id="slideAuthor"></p>
+  </div>
 </div>
 <div class="quoteSection">
-    <h1 class="quoteTitle">Quote Generator</h1>
+    <h1 class="quoteTitle" id="quoteTitle"></h1>
     <div class="quoteMain">
     <div class="quoteBorder" id="quoteBorder">
         <p class="quoteText" id="quoteText"><span id="spanInput" class="spanInput"></span><span id="imgInput"></span></p>

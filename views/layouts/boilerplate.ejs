@@ -12,6 +12,9 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
@@ -62,7 +65,7 @@
             <li class="liStyle">
               <div class="liDiv">
                 <div class="titleDiv">
-                  <a href="/about">
+                  <a href="/about" class="link" id="about">
                     <% if(titleObj === "About") {%>
                     <span class="title <%="navActive" %>">About</span>
                     <% } else { %> 
@@ -80,7 +83,7 @@
             <li class="liStyle">
               <div class="liDiv">
                 <div class="titleDiv">
-                  <a href="/createAccount"> 
+                  <a href="/createAccount" class="link" id="createAccount"> 
                     <% if(titleObj === "Create Account") {%>
                     <span class="title <%="navActive" %>">Create Account</span>
                     <% } else { %> 
@@ -98,7 +101,7 @@
             <li class="liStyle">
               <div class="liDiv">
                 <div class="titleDiv">
-                  <a href="/login">
+                  <a href="/login" class="link" id="login">
                     <% if(titleObj === "Login") {%>
                     <span class="title <%="navActive" %>">Member Login</span>
                     <% } else { %> 
@@ -116,7 +119,7 @@
             <li>
               <div class="liDiv">
                 <div class="titleDiv">
-                  <a href="/contact">
+                  <a href="/contact" class="link" id="contact">
                     <% if(titleObj === "Contact") {%>
                     <span class="title <%="navActive" %>">Contact</span>
                     <% } else { %> 

@@ -278,6 +278,7 @@ BOILERPLATE HEADER/FOOTER
 }
 .title {
   color: #777;
+  font-size: 16px;
   letter-spacing: 1px;
   line-height: 40px;
   margin-left: 15px;
@@ -476,6 +477,8 @@ HOME STYLES
 
 .slideShow {
   display: block;
+  background-color: #880000;
+  border-radius: 5px;
   height: 200px;
   width: 300px;
   margin-left: auto;
@@ -485,9 +488,26 @@ HOME STYLES
 }
 
 .slideShow img {
+  position: relative; 
+  top: -200px;
   border-radius: 5px;
   height: 200px;
   width: 300px;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+}
+
+.slideShow img:hover {
+  opacity: 0.35;
+}
+
+.slideAuthor {
+  line-height: 200px;
+  letter-spacing: 2px;
+  font-size: 25px;
+  color: #eee;
+  font-family: 'Anton', sans-serif;
+  text-align: center;
 }
 
 .fadeIn {
@@ -503,11 +523,39 @@ HOME STYLES
 
 .quoteTitle {
   color: #3d3d3d;
-  font-family: "Merriweather", serif;
+  height: 20px;
+  font-family: inherit;
   font-style: italic;
+  font-weight: bold;
   font-size: 20px;
-  letter-spacing: 3px;
+  line-height: 20px;
+  letter-spacing: 4px;
   text-align: center;
+}
+
+.quoteTitle span {
+  display: none;
+  white-space: pre;
+}
+
+span.quoteAnimate {
+  display: inline-block;
+  animation-name: shifter;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes shifter {
+  0% {
+    transform: translateX(-500px);
+   
+  }
+ 
+  100% {
+    transform: translateX(0px);
+
+  }
 }
 
 .quoteMain {
@@ -519,13 +567,13 @@ HOME STYLES
 
 .quoteBorder {
   padding: 15px;
-  height: 100px;
   width: 300px;
+  min-height: 100px;
   margin-top: 20px;
-  overflow: auto;
   background-color: #eee;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  transition: all 0.3s ease-in;
 }
 
 .quoteText {
@@ -601,12 +649,18 @@ CREATE ACCOUNT / LOGIN / CONTACT STYLES
 .h2Div {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+}
+
+.h2Div img {
+  height: 35px;
+  position: relative;
+  top: 8px;
 }
 
 .formTitle {
   color: #3d3d3d;
-  font-family: "Merriweather", serif;
+  font-family: inherit;
+  font-style: italic;
   font-size: 20px;
   letter-spacing: 3px;
   margin-top: 35px;
@@ -795,13 +849,13 @@ ABOUT / TERMS STYLES
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
 }
 
 .aboutTitle,
 .termsTitle {
   color: #3d3d3d;
-  font-family: "Merriweather", serif;
+  font-family: inherit;
+  font-style: italic;
   font-size: 20px;
   letter-spacing: 2px;
   margin-top: 35px;
@@ -809,7 +863,7 @@ ABOUT / TERMS STYLES
 }
 
 .aboutTitle span {
-  font-style: italic;
+ color:#880000;
 }
 
 .termsDate {
@@ -836,7 +890,6 @@ ABOUT / TERMS STYLES
 .termsBorder {
   display: flex;
   flex-direction: column;
-  /* height: 320px; */
   width: 300px;
   overflow: auto;
   background-color: #eee;
@@ -863,88 +916,6 @@ ABOUT / TERMS STYLES
   font-weight: 600;
 }
 
-/* ===============================================
-ALERT STYLES
-=============================================== */
-
-.successContainer,
-.deleteContainer {
-  height: fit-content;
-  width: 300px;
-  transition: all 0.5s ease-in;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.deleteContainer {
-  display: none;
-}
-
-.deleteContainerHide {
-  display: none;
-}
-
-.deleteContainerShow {
-  display: block;
-}
-
-.deleteAcBtnDiv {
-  display: flex;
-  justify-content: space-between;
-}
-
-.successDiv,
-.deleteDiv {
-  height: fit-content;
-  width: fit-content;
-  background-color: #880000;
-  margin: 0 auto;
-  padding: 10px 20px;
-  border-radius: 10px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 1s ease-in;
-  transition: all 0.5s ease-in;
-}
-
-.messageDisplay {
-  opacity: 0.8;
-}
-
-.messageRemove {
-  opacity: 0;
-}
-
-.successText,
-.deleteText {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 2px;
-  color: white;
-}
-
-.btnContinue,
-.btnDismiss {
-  color: white;
-  background-color: #880000;
-  border: 2px solid white;
-  padding: 8px 16px;
-  border-radius: 30px;
-  font-family: inherit;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.btnContinue:hover,
-.btnDismiss:hover {
-  background-color: #777;
-  cursor: pointer;
-}
 
 /* ===============================================
 ALERT STYLES
@@ -1103,6 +1074,12 @@ MEDIA QUERIES
   .slideShow img {
     height: 275px;
     width: 375px;
+    top: -275px
+  }
+
+  .slideAuthor {
+    line-height: 275px;
+    font-size: 30px;
   }
 
   .quoteSection {
@@ -1110,13 +1087,9 @@ MEDIA QUERIES
     margin-top: 40px;
   }
 
-  .quoteTitle {
-    font-size: 20px;
-  }
-
   .quoteBorder {
+    min-height: 110px;
     padding: 20px;
-    height: 150px;
     width: 350px;
     margin-top: 25px;
   }
@@ -1132,7 +1105,7 @@ MEDIA QUERIES
   }
 
   .formBorder {
-    margin-top: 50px;
+    margin-top: 30px;
     height: 550px;
   }
 
@@ -1180,12 +1153,7 @@ MEDIA QUERIES
 
   .aboutBox,
   .termsBox {
-    /* height: 550px; */
     line-height: 20px;
-    margin-top: 50px;
-  }
-
-  .termsBox {
     margin-top: 30px;
   }
 
@@ -1202,17 +1170,13 @@ MEDIA QUERIES
 
   .aboutBorder,
   .termsBorder {
-    /* height: 600px; */
     width: 400px;
     padding: 30px 30px 10px 30px;
-  }
-
-  .termsBorder {
-    height: 540px;
   }
 }
 
 @media only screen and (min-width: 769px) {
+
   .slideBorder {
     height: 300px;
     width: 425px;
@@ -1235,6 +1199,8 @@ MEDIA QUERIES
 
   .quoteTitle {
     font-size: 22px;
+    height: 22px;
+    line-height: 22px;
   }
 
   .quoteBorder {
@@ -1283,7 +1249,7 @@ MEDIA QUERIES
     display: flex;
     justify-content: center;
     background-color: none;
-    margin-top: 25px;
+    margin-top: 35px;
     margin-bottom: 10px;
     list-style-type: none;
   }
@@ -1295,6 +1261,26 @@ MEDIA QUERIES
     line-height: 25px;
     opacity: 1;
     font-style: normal;
+  }
+
+  .title:hover {
+    display: inline-block;
+    animation-name: wobble;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes wobble {
+    0% {
+      transform:scale(1);
+    }
+    50% {
+      transform:scale(1.2);
+    }
+    100% {
+      transform:scale(1);
+    }
+
   }
 
   span.title {
@@ -1311,11 +1297,11 @@ MEDIA QUERIES
   }
 
   .title:hover {
-    color: #3d3d3d;
+    color: #880000;
   }
 
   .slideBorder {
-    margin-top: 70px;
+    margin-top: 90px;
   }
 
   .quoteText {
@@ -1413,6 +1399,16 @@ MEDIA QUERIES
     margin-top: 20px;
   }
 
+  .h2Div,
+  .h2DivTerms {
+    margin-top: 50px;
+  }
+
+  .h2Div img {
+    height: 40px;
+    top: 9px;
+  }
+
   .aboutTitle,
   .termsTitle {
     font-size: 23px;
@@ -1436,6 +1432,14 @@ MEDIA QUERIES
     width: 450px;
     padding: 30px 30px 10px 30px;
   }
+
+  .errorContainer {
+    margin-top: 80px;
+  }
+
+  .errorDiv {
+    width: 375px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1452,7 +1456,6 @@ MEDIA QUERIES
   .slideBorder {
     width: 500px;
     padding: 8px;
-    margin-top: 65px;
   }
 
   .slideShow {
@@ -1463,12 +1466,18 @@ MEDIA QUERIES
     width: 500px;
   }
 
+  .slideAuthor {
+    font-size: 35px;
+  }
+
   .quoteSection {
     width: 570px;
   }
 
   .quoteTitle {
     font-size: 23px;
+    height: 23px;
+    line-height: 23px;
   }
 
   .quoteBorder {

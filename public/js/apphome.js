@@ -2,6 +2,7 @@
 // HOME JS
 // ==============================================
 
+
 window.addEventListener("load", initialize);
 
 const slideShow = document.getElementById("slideShow");
@@ -12,6 +13,7 @@ const quote = document.getElementById("spanInput");
 const imgInput = document.getElementById("imgInput");
 const author = document.getElementById("quoteAuthor");
 const slideBorder = document.getElementById("slideBorder");
+const slideAuthor = document.getElementById("slideAuthor");
 
 let quoteObj = {
   _id: "",
@@ -22,8 +24,9 @@ let quoteObj = {
 function initialize() {
   if (document.addEventListener) {
     timer(imgSelector, 10000);
+    titleFly();
   }
-  if(successDiv) {
+  if (successDiv) {
     alertStyler(successDiv);
   }
 }
@@ -43,6 +46,7 @@ function imgSelector() {
   imgIndex = mathRoll;
   imgNum = imgIndex.toString();
   const imgSelect = imageLibrary[`writers${imgNum}`].src;
+  slideAuthor.textContent = photoName[mathRoll - 1];
   imgAttach(imgSelect);
 }
 
@@ -67,13 +71,48 @@ function imgFadeIn() {
   }, 7000);
 }
 
+// ===============================================
+// QUOTE TITLE STYLE 
+// ===============================================
+
+const qTitle = document.getElementById("quoteTitle");
+const newTitle = "Quote Generator";
+const txSplit = newTitle.split(""); 
+
+function titleFly() {
+  qTitle.textContent = "";
+  for (let i = 0; i < txSplit.length; i++) {
+    qTitle.innerHTML += "<span>" + txSplit[i] + "</span>";
+  }
+  meter = setInterval(onClock, 100);
+}
+
+let idx = txSplit.length - 1;
+let meter;
+
+function onClock() {
+  const span = qTitle.querySelectorAll("span")[idx];
+    span.classList.add("quoteAnimate");
+  idx--;
+  if (idx < 0) {
+    finish();
+    } else {
+      return;
+    }
+  }
+
+function finish() {
+  clearInterval(meter);
+}
+
+
 //   ==================================================
 //   GET QUOTE JSON
 //   ==================================================
 
 const randomQuote = async () => {
   const options = {
-    headers: new Headers({ "call-type": "fetch"}),
+    headers: new Headers({ "call-type": "fetch" }),
   };
   try {
     const response = await fetch("/", options);
@@ -87,7 +126,6 @@ const randomQuote = async () => {
 
 function quoteScroll(val, el) {
   let qSplit = val.split("");
-
   if (el === quote) {
     quote.textContent = "";
     author.textContent = "";
@@ -131,6 +169,8 @@ function quoteScroll(val, el) {
 }
 
 quoteBtn.addEventListener("click", randomQuote);
+
+
 // ==================================================
 // ALERT STYLES
 // ==================================================
@@ -142,7 +182,7 @@ function alertStyler() {
     successDiv.classList.add("messageDisplay");
     setTimeout(() => {
       successDiv.classList.add("messageRemove");
-     }, 2000);
+    }, 2000);
   }, 500);
 }
 
@@ -232,3 +272,47 @@ imageLibrary["writers40"] = new Image(250, 150);
 imageLibrary["writers40"].src = "img/writers40.jpg";
 imageLibrary["writers41"] = new Image(250, 150);
 imageLibrary["writers41"].src = "img/writers41.jpg";
+
+const photoName = [
+  "Simone De Beauvoir",
+  "Toni Morrison",
+  "Oscar Wilde",
+  "Friedrich Nietzsche",
+  "Karl Marx",
+  "Fay Weldon",
+  "Charles Dickens",
+  "Sigmund Freud",
+  "Albert Camus",
+  "Isaac Asimov",
+  "James Baldwin",
+  "William Burroughs",
+  "Stephen King",
+  "Julia Kristeva",
+  "Melanie Klein",
+  "Gustave Flaubert",
+  "Salman Rushdie",
+  "Iris Murdoch",
+  "Virginia Woolf",
+  "Stuart Hall",
+  "Jacques Derrida",
+  "Margaret Atwood",
+  "Edgar Allan Poe",
+  "Michel Foucault",
+  "Martin Amis",
+  "Susan Sontag",
+  "George Orwell",
+  "Edward Said",
+  "Ursula Le Guin",
+  "Slavoj Zizek",
+  "Cornell West",
+  "Hannah Arendt",
+  "Judith Butler",
+  "Iain McGilchrist",
+  "Herbert Marcuse",
+  "Eric Hobsbawm",
+  "Jean Baudrillard",
+  "Jacques Lacan",
+  "Christopher Hitchens",
+  "W.H. Auden",
+  "Guy Debord"
+];

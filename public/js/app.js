@@ -13,6 +13,8 @@ const defintion = document.getElementById("definition");
 const dictionaryRes = document.getElementById("dictionaryRes");
 const push = document.getElementById("push");
 const wrapper = document.getElementById("wrapper");
+const urlStr = window.location.href;
+const strCheck2 = urlStr.includes("/login");
 
 function initialize() {
   if (document.addEventListener) {
@@ -30,6 +32,9 @@ function initialize() {
   }
   if (contactBtn) {
     listenerFn(contactBtn, labelList);
+  }
+  if (strCheck2) {
+    cookieLoader();
   }
 }
 
@@ -99,13 +104,11 @@ function navReturn() {
 // DICTIONARY JS
 // =====================================================
 
-//  Marriam-Webster ap i key - bb342bfa-3fad-48de-ba73-320d0ebae96c
 
 const fetchDefinition = async (eve) => {
   eve.preventDefault();
   let termString = searchTerm.value;
   let term = termString.toLowerCase().trim();
-
   try {
     const response = await fetch(
       `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${term}?key=bb342bfa-3fad-48de-ba73-320d0ebae96c`
@@ -219,4 +222,18 @@ function borderAlert(ele) {
       }, 700);
     }, 700);
   }, 700);
+}
+
+// ==============================================
+// COOKIE FIND AND ADD TO MEMBER LOGIN
+// ==============================================
+
+function cookieLoader() {
+  const input = document.getElementById("LoginUser");
+  const cookieMagic = document.cookie;
+  if (cookieMagic) {
+    const cookieArr = cookieMagic.split("=");
+    input.value = cookieArr[1];
+    return;
+  }
 }
