@@ -15,6 +15,17 @@ const push = document.getElementById("push");
 const wrapper = document.getElementById("wrapper");
 const urlStr = window.location.href;
 const strCheck2 = urlStr.includes("/login");
+const spinner = document.getElementById('spinner');
+
+// =======================================
+// SPINNER 
+// =======================================
+
+window.onload = function() {
+	spinner.style.display = "none";
+}
+
+  //==========================================
 
 function initialize() {
   if (document.addEventListener) {

@@ -184,8 +184,59 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  /* overflow: auto; */
   scroll-behavior: smooth;
 }
+
+body::-webkit-scrollbar {
+	width: 0.5em;
+  }
+  
+  body::-webkit-scrollbar-track {
+	background-color: transparent;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 0.25em;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+	background-color: #555;
+  }
+
+/* ==================================
+SPINNER STYLE 
+=================================== */
+
+.spinner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+}
+
+.spinner__div {
+	height: 75px;
+	width: 75px;
+	border: 3px solid transparent;
+	border-top-color: #777;
+	border-bottom-color: #880000;
+	border-radius: 50%;
+	animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* ============================================= */
 
 .bodyImg {
   background-image: url("/img/bg10.jpg");
@@ -1076,6 +1127,16 @@ MEDIA QUERIES
 ====================================== */
 
 @media only screen and (min-width: 536px) {
+  .spinner__div {
+    height: 100px;
+    width: 100px;
+    border: 5px solid transparent;
+    border-top-color: #777;
+    border-bottom-color: #880000;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
+
   .slideBorder {
     height: 275px;
     width: 375px;
@@ -1240,6 +1301,17 @@ MEDIA QUERIES
 }
 
 @media only screen and (min-width: 992px) {
+
+  .spinner__div {
+    height: 125px;
+    width: 125px;
+    border: 8px solid transparent;
+    border-top-color: #777;
+    border-bottom-color: #880000;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
+
   .menuToggle {
     pointer-events: none;
   }
