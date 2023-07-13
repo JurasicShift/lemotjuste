@@ -125,12 +125,20 @@ app.get("/origin", (req, res) => {
     delete req.session.returnTo;
 })
 
+//404 HANDLER
+
+app.get('*', (req, res) => {
+  throw new AppError(`PAGE NOT FOUND`, 404);
+
+})
+
+
 // ==================================================
 // INTERCEPT PARTICULAR MONGOOSE ERRORS
 // ==================================================
 
 const handleValidationErr = (err) => {
-  return new AppError(`VALIDATION FAILED...CHECK REQUIRED FIELDS ARE COMPLETE`, 400);
+  throw new AppError(`VALIDATION FAILED...CHECK REQUIRED FIELDS ARE COMPLETE`, 400);
 };
 
 app.use((err, req, res, next) => {
@@ -141,7 +149,12 @@ app.use((err, req, res, next) => {
 // =================================================
 
 app.use((err, req, res, next) => {
-  req.session.returnTo = req.url;
+  if(err.status === 404) {
+    req.session.returnTo = "/";
+  } else {
+    req.session.returnTo = req.url;
+  }
+  
   const { status = 500 } = err;
   if (!err.message) err.message = "OH NO SOMETHING WENT WRONG";
   const private = req.session.private;
