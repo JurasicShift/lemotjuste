@@ -696,10 +696,12 @@ span.quoteAnimate {
   font-size: 12px;
   letter-spacing: 2px;
   font-weight: 600;
+  transition: background-color 250ms linear;
 }
 
 .quoteBtn:hover {
   background-color: #777;
+  cursor: pointer;
 }
 
 .quoteSub {
